@@ -1,0 +1,89 @@
+# rocky.repo
+#
+# The mirrorlist system uses the connecting IP address of the client and the
+# update status of each mirror to pick current mirrors that are geographically
+# close to the client.  You should use this for Rocky updates unless you are
+# manually picking other mirrors.
+#
+# If the mirrorlist does not work for you, you can try the commented out
+# baseurl line instead.
+
+[rocky8_baseos]
+name=Rocky Linux 8 - BaseOS
+mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=$basearch&repo=BaseOS-8.7
+#baseurl=http://dl.rockylinux.org/$contentdir/$releasever/BaseOS/$basearch/os/
+gpgcheck=0
+enabled=0
+countme=1
+metadata_expire=6h
+
+[rocky8_extras]
+name=Rocky Linux 8 - extras
+mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=$basearch&repo=extras-8.7
+gpgcheck=0
+enabled=0
+countme=1
+metadata_expire=6h
+
+[rocky8_plus]
+name=Rocky Linux 8 - plus
+mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=$basearch&repo=plus-8.7
+gpgcheck=0
+enabled=0
+countme=1
+metadata_expire=6h
+
+[appstream8]
+name=Rocky Linux 8 - AppStream
+mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=$basearch&repo=AppStream-8.7
+#baseurl=http://dl.rockylinux.org/$contentdir/$releasever/AppStream/$basearch/os/
+gpgcheck=0
+enabled=0
+countme=1
+metadata_expire=6h
+
+[rocky8_powertools]
+name=Rocky Linux 8 - powertools
+mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=$basearch&repo=PowerTools-8.7
+#baseurl=http://dl.rockylinux.org/$contentdir/$releasever/CRB/$basearch/os/
+gpgcheck=0
+enabled=0
+countme=1
+metadata_expire=6h
+
+[rocky8_devel]
+name=Rocky Linux 8 - devel
+mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=$basearch&repo=rocky-devel-8.7
+#baseurl=http://dl.rockylinux.org/$contentdir/$releasever/CRB/$basearch/os/
+gpgcheck=0
+enabled=0
+countme=1
+metadata_expire=6h
+
+[rocky8_highavailability]
+name=Rocky Linux 8 - ha
+mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=$basearch&repo=rocky-HighAvailability-8.7
+#baseurl=http://dl.rockylinux.org/$contentdir/$releasever/CRB/$basearch/os/
+gpgcheck=0
+enabled=0
+countme=1
+metadata_expire=6h
+
+[rocky8_resilientStorage]
+name=Rocky Linux 8 - resilientstorag 
+mirrorlist=https://mirrors.rockylinux.org/mirrorlist?arch=$basearch&repo=rocky-ResilientStorage-8.7
+#baseurl=http://dl.rockylinux.org/$contentdir/$releasever/CRB/$basearch/os/
+gpgcheck=0
+enabled=0
+countme=1
+metadata_expire=6h
+
+[rocky8_epel]
+name=Extra Packages for Enterprise Linux $releasever - $basearch
+# It is much more secure to use the metalink, but if you wish to use a local mirror
+# place its address here.
+baseurl=https://mirror.in2p3.fr/pub/linux/epel/8/Everything/x86_64/
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-8&arch=$basearch&infra=$infra&content=$contentdir
+enabled=0
+gpgcheck=0
+countme=1
